@@ -87,8 +87,6 @@ let Home = {
             <p>© 2016 工作室官网 Powerd by 红满堂工作室</p>
             <a href="#">意见反馈</a>
         </footer>
-        <div id="history-introduce"></div>
-        <div id="home"></div>
         </div>
     `,
     data:
