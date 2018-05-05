@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>HongTown</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <meta name="keywords" content="华南农业大学,华农,红满堂,工作室,官网,首页">
+        <meta name="description" content="红满堂工作室是致力于服务华农学子的校级学生组织，目前由技术组、美工组、运营和版主组成。">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    <body>
+        <!-- Html模板 -->
+        <script type="text/x-template" id="nav-items-template">
+            <!-- :class="{active: }" -->
+            <router-link :to="item.href" v-once>{{ item.value }}</router-link>
+            <!-- <keep-alive> -->
+                <router-view class="view"></router-view>
+            <!-- </keep-alive> -->
+            <!-- <a :href="item.href" >{{ item.value }}</a> -->
+        </script>
+        <script type="text/x-template" id="product-template">
+                <div class="image_blank" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
+                    <img :src="product.image" class="img-bg">
+                    <div class="mask" :class="{active: isHover}">
+                        <p :class="{active: isHover}">{{ product.name }}</p>
+                    </div>
+                </div>
+        </script>
+        <script type="text/x-template" id="item-product-template">
+
+
+            <span>
+                <p class="slider-word">
+                    {{ item.href }}
+                </p>
+                <a href="#common">
+
+                    <img :src="item.value">
+
+                </a>
+            </span>
+        </script>
+        <script type="text/x-template" id="box_product">
+
+
+                    <!-- <p>Test</p> -->
+                    <div class="small_box">
+                        <!-- <p>Test</p> -->
+                        <p class="box_value">
+                            <!-- <p>Test</p> -->
+                            {{ item.value }}
+                        </p>
+                        <!-- <p>Test</p> -->
+                        <img class="box_img" :src="item.href">
+                        <p class="box_text">
+                            <!-- <p>Test</p> -->
+                            {{ item.text }}
+                        </p>
+                    </div>
+
+        </script>
+        <!-- 主要挂载dom结点 -->
+        <div id="app"></div>
+        <div id="home"></div>
+        <div id="history-introduce"></div>
+        <div id="product-introduce"></div>
+        <div id="about-us"></div>
+        <!-- 依赖包 -->
+        <script src="node_modules\jquery\dist\jquery.min.js"></script>
+        <script src="node_modules\vue\dist\vue.min.js"></script>
+        <script src="node_modules\vue-router\dist\vue-router.min.js"></script>
+        <!-- 配置服务 -->
+        <script src="js\serve.js"></script>
+        <!-- 配置页面 -->
+        <script src="js\history-introduce.js"></script>
+        <script src="js\product-introduce.js"></script>
+        <script src="js\about.js"></script>
+        <!-- 入口文件 -->
+        <script src="js\index.js"></script>
+    </body>
+</html>
