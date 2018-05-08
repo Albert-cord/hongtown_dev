@@ -209,6 +209,7 @@ let history = {
 
             },
             endToSlide: function (event) {
+                if(!this.slideStatu) return
                 let partOfWindow = 8
                 // log(this.diff, partOfWindow)
                 if(!this.clickDone) return
